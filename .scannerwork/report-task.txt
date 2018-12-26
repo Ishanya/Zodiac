@@ -1,0 +1,6 @@
+projectKey=company:angular-client-star-movies
+serverUrl=http://localhost:9000
+serverVersion=7.4.0.18908
+dashboardUrl=http://localhost:9000/dashboard?id=company%3Aangular-client-star-movies
+ceTaskId=AWeXdpJRYsjfwqj25Rph
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AWeXdpJRYsjfwqj25Rph

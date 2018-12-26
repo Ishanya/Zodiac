@@ -1,0 +1,41 @@
+<body>
+
+  <!-- <div id="wdth" class="container">
+      <div class="row">
+          <div class="col-sm-4">
+              <div class="card card-hover h-100">
+                  <div class="card-body">
+                      <div class="reveal bg-warning p-2">
+                          <h1>Title of the Movie</h1>
+                      </div>
+                      <br><br>
+                      <img id="wdthh" src="assets\images\f.jpg">
+                      <h3 class="card-title">Movie</h3>
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                     
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div> -->
+  <mat-card class="example-card">
+      <div *ngIf="resultMovie">
+            <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>{{resultMovie.movieName}}</mat-card-title>
+                    <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+                  </mat-card-header>
+                  <img mat-card-image src="{{resultMovie.moviePosterUrl}}" alt="Photo of a Shiba Inu">
+                  <mat-card-content>
+                    <p>
+                      The Shiba Inu is the smallest of the...
+                    </p>
+                  </mat-card-content>
+                  <mat-card-actions>
+                    <button mat-button (click) = "addToFav(resultMovie)">ADD</button>
+                  </mat-card-actions>
+      </div>
+    </mat-card>
+      
+      
+</body>
