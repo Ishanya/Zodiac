@@ -1,0 +1,94 @@
+<div>
+  <button id="bb" style="color: red" type="button" class="btn btn-danger" (click)="logout()">Logout</button>
+
+  <div id="mySidenav" class="sidenav">
+
+    <a href="javascript:void(0)" class="closebtn " style="margin-right: 25vh" (click)="closeNav()">&times;</a>
+    <a href="home#search">
+      <span style="font-size: 2vw;">
+        <i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp;</span><span>Search
+      </span>
+    </a>
+    <div id="search">
+      <span class="close">X</span>
+
+      <form role="search" id="searchform" action="/search" method="get">
+        <input value="" autocomplete="off" name="q" type="search" [(ngModel)]="title" placeholder="type to search" />
+        <button id="btt" type="button" class="close" style="margin-right: 42vw; margin-top: 27%;color:whitesmoke;"
+          (click)="searchMovie()">SEARCH
+          <i class="fas fa-search"></i>
+        </button>
+
+      </form>
+    </div>
+    <a routerLink="/favourite">
+      <span style="font-size: 2vw;">
+        <i class="fas fa-address-book"></i>&nbsp;</span><span>Favourites
+      </span>
+    </a>
+    <a routerLink="/playlist">
+      <span style="font-size: 2vw;">
+        <i class="fas fa-user"></i>&nbsp;</span><span>New Playlist
+      </span>
+    </a>
+    <a routerLink="/searchhistory">
+      <span style="font-size: 2vw;">
+        <i class="fas fa-history"></i>&nbsp;</span><span>History
+      </span>
+    </a>
+    <a routerLink="/weeklyuserreport">
+      <span style="font-size: 2vw;">
+        <i class="fas fa-file"></i>&nbsp;</span><span>Weekly Report
+      </span>
+    </a>
+
+
+
+  </div>
+  <span class="float-right" style="font-size:30px;cursor:pointer;color: brown; margin-right: 2vh" (click)="openNav()">&#9776;</span>
+</div>
+
+
+<div class="container-fluid">
+
+  <div class="col-12">
+    <ngb-carousel>
+      <ng-template ngbSlide>
+        <img id="ab" src="../assets/images/slide1.png" alt="First slide">
+      </ng-template>
+
+      <ng-template ngbSlide>
+        <img id="ab" src="../assets/images/slide2r.png" alt="Second slide">
+      </ng-template>
+
+      <ng-template ngbSlide>
+        <img id="ab" src="../assets/images/slide3.png" alt="Third slide">
+
+      </ng-template>
+
+      <ng-template ngbSlide>
+        <img id="ab" src="../assets/images/slide4.png" alt="Fourth slide">
+
+      </ng-template>
+    </ngb-carousel>
+
+  </div>
+
+
+  <div *ngIf="movie">
+    <h1>Search Result</h1>
+    <div class="row">
+      <div class="col-sm-3" *ngFor="let m of movie">
+        <app-cards [resultMovie]="m"></app-cards>
+        <br>
+      </div>
+
+    </div>
+  </div>
+  <br><br>
+
+  <!-- Rotating card -->
+  <div id="bbbb">
+    <app-home-footer></app-home-footer> -->
+    <!-- <app-cards></app-cards> -->
+  </div>

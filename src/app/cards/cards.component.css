@@ -1,0 +1,62 @@
+ .card-hover .reveal {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    padding: 0;
+}
+
+.card-hover:hover .reveal {
+    height: auto;
+    visibility: visible;
+    transition: opacity 1s ease;
+}
+
+#wdth{
+    width: 80vw;
+    height: 40vh;
+    
+}
+   .example-card {
+    max-width: 400px;
+  } 
+   
+  .example-header-image {
+    background-size:inherit;
+    background-color: orange;
+  }
+
+   img
+  {
+    height: 30vh;
+   
+  }
+
+  .title
+  {
+      font-size: 1.3vw;
+      text-emphasis: emphasis s;
+
+  }
+
+
+  /* entire container, keeps perspective 
+.flip-container {
+    -webkit-perspective: 1000;
+    background:transparent;
+    margin: 100px auto;
+  }
+  
+  /* flip the pane when clicked 
+  .flip-container:hover .flipper, .flip-container.hover .flipper {
+    -webkit-transform: rotateY(180deg);
+  }
+  
+  /* .flip-container, .front, .back {
+      width: 320px;
+      height: 480px;
+  }
+   */
+  
+  
+
+  
